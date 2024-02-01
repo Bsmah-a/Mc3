@@ -15,7 +15,7 @@ struct ModesSheet: View {
            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(named: "Title") ?? .black]
            }
     @State private var models:[Models] = []
-    let model :[Models] = [
+    let freemodel :[Models] = [
         Models(pic:"Eating_Mood",
                title: "Eating Mood",
                desc: "Eat with Ozzy"),
@@ -30,7 +30,7 @@ struct ModesSheet: View {
                     NavigationStack {
                         VStack {
                             Form{
-                                List(model) { Models in
+                                List(freemodel) { Models in
                                     HStack {
                                         Image((Models.pic))
                                             .resizable()
@@ -40,26 +40,27 @@ struct ModesSheet: View {
                                             VStack(alignment: .leading) {
                                                 Text(Models.title)
                                                     .font(.callout)
-                                                    .padding(.trailing, 35)
+                                                    .padding(.trailing, 20)
                                                     .foregroundColor(.white)
                                                 Text(Models.desc)
                                                     .font(.subheadline)
                                                 .foregroundColor(.white)}
-                                            Button(action: {
-                                                print("the selected model is: \(Models.pic)")
-                                            }) {
-                                                Text("Apply!").foregroundColor(.white)
-                                                
-                                            }.background(Color("Button"))
-                                                .buttonStyle(.bordered)
-                                                .cornerRadius(10)
-                                            
                                         }
+                                        Button(action: {
+                                            print("the selected model is: \(Models.pic)")
+                                        }) {
+                                            if Models.pic == "Study_Mood" {
+                                                Text("12.99 SAR").foregroundColor(.white)
+                                            }else { Text("Apply!").foregroundColor(.white)}
+                                            
+                                        }.background(Color("Button"))
+                                            .buttonStyle(.bordered)
+                                            .cornerRadius(10).padding()
                                     }
                                 }
                                 .listRowBackground(Color("List"))
                                 .background(Color("List"))
-                            }
+                            }.padding(.vertical)
             }.navigationBarTitle("Choose Mood")
                             .scrollContentBackground(.hidden)
                             .background(Color("Background"))
