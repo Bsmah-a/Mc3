@@ -47,6 +47,9 @@
 		41335F992B59471D00C6A1CB /* Mc3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mc3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41335F9D2B59471D00C6A1CB /* Mc3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mc3UITests.swift; sourceTree = "<group>"; };
 		41335F9F2B59471D00C6A1CB /* Mc3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mc3UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		419492F12B6BC4A600B764AF /* Normal1.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Normal1.usdc; sourceTree = "<group>"; };
+		419492F22B6BC4AE00B764AF /* eat1.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = eat1.usdc; sourceTree = "<group>"; };
+		419492F32B6BC4BD00B764AF /* SleepnePPP.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = SleepnePPP.usdc; sourceTree = "<group>"; };
 		C5DEF9AB2B66FC9400B89C68 /* ModesSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModesSheet.swift; sourceTree = "<group>"; };
 		C5DEF9AD2B66FCB700B89C68 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		C5DEF9AF2B66FD3100B89C68 /* robot_walk_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot_walk_idle.usdz; sourceTree = "<group>"; };
@@ -102,6 +105,9 @@
 			children = (
 				41335F822B59471A00C6A1CB /* AppDelegate.swift */,
 				41335F842B59471A00C6A1CB /* ContentView.swift */,
+				419492F12B6BC4A600B764AF /* Normal1.usdc */,
+				419492F32B6BC4BD00B764AF /* SleepnePPP.usdc */,
+				419492F22B6BC4AE00B764AF /* eat1.usdc */,
 				C5DEF9AF2B66FD3100B89C68 /* robot_walk_idle.usdz */,
 				C5DEF9AB2B66FC9400B89C68 /* ModesSheet.swift */,
 				C5DEF9AD2B66FCB700B89C68 /* Models.swift */,
