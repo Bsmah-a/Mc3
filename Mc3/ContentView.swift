@@ -81,9 +81,9 @@ struct ContentView: View {
     var body: some View {
         ARViewContainer().edgesIgnoringSafeArea(.all)
         
-//            .sheet(isPresented: $isModesSheetPresented, content: {
-//                  ModesSheet()
-//                .presentationDetents([.height(110), .medium])})
+            .sheet(isPresented: $isModesSheetPresented, content: {
+                  ModesSheet()
+                .presentationDetents([.height(110), .medium])})
                    }
 }
 
