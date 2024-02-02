@@ -33,7 +33,7 @@ struct ARViewContainer: UIViewRepresentable {
         let scene = SCNScene()
 //      let camera= SCNCamera()
         // Load the model
-        if let robotScene = SCNScene(named: "robot_walk_idle.usdz") {
+        if let robotScene = SCNScene(named: "Sleep2.usdz") {
             for child in robotScene.rootNode.childNodes {
                 scene.rootNode.addChildNode(child)
             }

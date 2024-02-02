@@ -17,10 +17,10 @@ struct ModesSheet: View {
     @State private var models:[Models] = []
     let freemodel :[Models] = [
         Models(pic:"Eating_Mood",
-               title: "Eating Mood",
+               title: "Eat Mood     ",
                desc: "Eat with Ozzy"),
         Models(pic:"Sleeping_Mood",
-               title: "Sleeping Mood",
+               title: "Sleep Mood",
                desc: "Nighty Night It's for Ozzy to sleep"),
         Models(pic:"Study_Mood",
                title: "Study Mood",
@@ -50,7 +50,7 @@ struct ModesSheet: View {
                                             print("the selected model is: \(Models.pic)")
                                         }) {
                                             if Models.pic == "Study_Mood" {
-                                                Text("12.99 SAR").foregroundColor(.white)
+                                                Text("12.99 SAR").foregroundColor(.white).font(.caption)
                                             }else { Text("Apply!").foregroundColor(.white)}
                                             
                                         }.background(Color("Button"))

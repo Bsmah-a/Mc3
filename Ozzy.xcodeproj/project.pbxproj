@@ -40,14 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		41335F7F2B59471A00C6A1CB /* Mc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41335F7F2B59471A00C6A1CB /* Ozzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ozzy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41335F822B59471A00C6A1CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41335F842B59471A00C6A1CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		41335F862B59471D00C6A1CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41335F892B59471D00C6A1CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		41335F8F2B59471D00C6A1CB /* Mc3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mc3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		41335F8F2B59471D00C6A1CB /* OzzyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OzzyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41335F932B59471D00C6A1CB /* Mc3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mc3Tests.swift; sourceTree = "<group>"; };
-		41335F992B59471D00C6A1CB /* Mc3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mc3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		41335F992B59471D00C6A1CB /* OzzyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OzzyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41335F9D2B59471D00C6A1CB /* Mc3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mc3UITests.swift; sourceTree = "<group>"; };
 		41335F9F2B59471D00C6A1CB /* Mc3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mc3UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		419492F92B6D024300B764AF /* eat57.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = eat57.usdz; sourceTree = "<group>"; };
@@ -96,9 +96,9 @@
 		41335F802B59471A00C6A1CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				41335F7F2B59471A00C6A1CB /* Mc3.app */,
-				41335F8F2B59471D00C6A1CB /* Mc3Tests.xctest */,
-				41335F992B59471D00C6A1CB /* Mc3UITests.xctest */,
+				41335F7F2B59471A00C6A1CB /* Ozzy.app */,
+				41335F8F2B59471D00C6A1CB /* OzzyTests.xctest */,
+				41335F992B59471D00C6A1CB /* OzzyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,9 +148,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		41335F7E2B59471A00C6A1CB /* Mc3 */ = {
+		41335F7E2B59471A00C6A1CB /* Ozzy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41335FA32B59471D00C6A1CB /* Build configuration list for PBXNativeTarget "Mc3" */;
+			buildConfigurationList = 41335FA32B59471D00C6A1CB /* Build configuration list for PBXNativeTarget "Ozzy" */;
 			buildPhases = (
 				41335F7B2B59471A00C6A1CB /* Sources */,
 				41335F7C2B59471A00C6A1CB /* Frameworks */,
@@ -160,14 +160,14 @@
 			);
 			dependencies = (
 			);
-			name = Mc3;
+			name = Ozzy;
 			productName = Mc3;
-			productReference = 41335F7F2B59471A00C6A1CB /* Mc3.app */;
+			productReference = 41335F7F2B59471A00C6A1CB /* Ozzy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		41335F8E2B59471D00C6A1CB /* Mc3Tests */ = {
+		41335F8E2B59471D00C6A1CB /* OzzyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41335FA62B59471D00C6A1CB /* Build configuration list for PBXNativeTarget "Mc3Tests" */;
+			buildConfigurationList = 41335FA62B59471D00C6A1CB /* Build configuration list for PBXNativeTarget "OzzyTests" */;
 			buildPhases = (
 				41335F8B2B59471D00C6A1CB /* Sources */,
 				41335F8C2B59471D00C6A1CB /* Frameworks */,
@@ -178,14 +178,14 @@
 			dependencies = (
 				41335F912B59471D00C6A1CB /* PBXTargetDependency */,
 			);
-			name = Mc3Tests;
+			name = OzzyTests;
 			productName = Mc3Tests;
-			productReference = 41335F8F2B59471D00C6A1CB /* Mc3Tests.xctest */;
+			productReference = 41335F8F2B59471D00C6A1CB /* OzzyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		41335F982B59471D00C6A1CB /* Mc3UITests */ = {
+		41335F982B59471D00C6A1CB /* OzzyUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41335FA92B59471D00C6A1CB /* Build configuration list for PBXNativeTarget "Mc3UITests" */;
+			buildConfigurationList = 41335FA92B59471D00C6A1CB /* Build configuration list for PBXNativeTarget "OzzyUITests" */;
 			buildPhases = (
 				41335F952B59471D00C6A1CB /* Sources */,
 				41335F962B59471D00C6A1CB /* Frameworks */,
@@ -196,9 +196,9 @@
 			dependencies = (
 				41335F9B2B59471D00C6A1CB /* PBXTargetDependency */,
 			);
-			name = Mc3UITests;
+			name = OzzyUITests;
 			productName = Mc3UITests;
-			productReference = 41335F992B59471D00C6A1CB /* Mc3UITests.xctest */;
+			productReference = 41335F992B59471D00C6A1CB /* OzzyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -224,7 +224,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 41335F7A2B59471900C6A1CB /* Build configuration list for PBXProject "Mc3" */;
+			buildConfigurationList = 41335F7A2B59471900C6A1CB /* Build configuration list for PBXProject "Ozzy" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -237,9 +237,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				41335F7E2B59471A00C6A1CB /* Mc3 */,
-				41335F8E2B59471D00C6A1CB /* Mc3Tests */,
-				41335F982B59471D00C6A1CB /* Mc3UITests */,
+				41335F7E2B59471A00C6A1CB /* Ozzy */,
+				41335F8E2B59471D00C6A1CB /* OzzyTests */,
+				41335F982B59471D00C6A1CB /* OzzyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -308,12 +308,12 @@
 /* Begin PBXTargetDependency section */
 		41335F912B59471D00C6A1CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 41335F7E2B59471A00C6A1CB /* Mc3 */;
+			target = 41335F7E2B59471A00C6A1CB /* Ozzy */;
 			targetProxy = 41335F902B59471D00C6A1CB /* PBXContainerItemProxy */;
 		};
 		41335F9B2B59471D00C6A1CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 41335F7E2B59471A00C6A1CB /* Mc3 */;
+			target = 41335F7E2B59471A00C6A1CB /* Ozzy */;
 			targetProxy = 41335F9A2B59471D00C6A1CB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -515,7 +515,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mc3.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mc3";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ozzy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ozzy";
 			};
 			name = Debug;
 		};
@@ -534,7 +534,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mc3.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mc3";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ozzy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ozzy";
 			};
 			name = Release;
 		};
@@ -575,7 +575,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		41335F7A2B59471900C6A1CB /* Build configuration list for PBXProject "Mc3" */ = {
+		41335F7A2B59471900C6A1CB /* Build configuration list for PBXProject "Ozzy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41335FA12B59471D00C6A1CB /* Debug */,
@@ -584,7 +584,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		41335FA32B59471D00C6A1CB /* Build configuration list for PBXNativeTarget "Mc3" */ = {
+		41335FA32B59471D00C6A1CB /* Build configuration list for PBXNativeTarget "Ozzy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41335FA42B59471D00C6A1CB /* Debug */,
@@ -593,7 +593,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		41335FA62B59471D00C6A1CB /* Build configuration list for PBXNativeTarget "Mc3Tests" */ = {
+		41335FA62B59471D00C6A1CB /* Build configuration list for PBXNativeTarget "OzzyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41335FA72B59471D00C6A1CB /* Debug */,
@@ -602,7 +602,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		41335FA92B59471D00C6A1CB /* Build configuration list for PBXNativeTarget "Mc3UITests" */ = {
+		41335FA92B59471D00C6A1CB /* Build configuration list for PBXNativeTarget "OzzyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41335FAA2B59471D00C6A1CB /* Debug */,
