@@ -11,6 +11,7 @@ import SwiftUI
 
         struct Models : Identifiable {
             let id: UUID = UUID()
+            let model : String
             let pic: String
             let title: String
             let desc: String

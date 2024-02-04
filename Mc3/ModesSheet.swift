@@ -9,20 +9,23 @@
 import SwiftUI
 
 struct ModesSheet: View {
+    @Binding var selectedModel: Models
     // change the .navigationBarTitle color
-    init() {
+    init(selectedModel: Binding<Models>) {
+        self._selectedModel =  selectedModel
            UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(named: "Title") ?? .black]
            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(named: "Title") ?? .black]
            }
-    @State private var models:[Models] = []
+//    @State private var models:[Models] = []
+
     let freemodel :[Models] = [
-        Models(pic:"Eating_Mood",
+        Models(model:"eat57.usdz",pic:"Eating_Mood",
                title: "Eat Mood     ",
                desc: "Eat with Ozzy"),
-        Models(pic:"Sleeping_Mood",
+        Models(model:"Sleep2.usdz",pic:"Sleeping_Mood",
                title: "Sleep Mood",
                desc: "Nighty Night It's for Ozzy to sleep"),
-        Models(pic:"Study_Mood",
+        Models(model:"Normal.usdz",pic:"Study_Mood",
                title: "Study Mood",
                desc: "Pick your book and study with Ozzy")]
     
@@ -47,15 +50,17 @@ struct ModesSheet: View {
                                                 .foregroundColor(.white)}
                                         }
                                         Button(action: {
-                                            print("the selected model is: \(Models.pic)")
+                                            print("the selected model is: \(Models.model)")
+                                           selectedModel = Models
                                         }) {
                                             if Models.pic == "Study_Mood" {
-                                                Text("12.99 SAR").foregroundColor(.white).font(.caption)
+                                                Text("Soon!").foregroundColor(.white)
                                             }else { Text("Apply!").foregroundColor(.white)}
                                             
                                         }.background(Color("Button"))
                                             .buttonStyle(.bordered)
                                             .cornerRadius(10).padding()
+                                            .disabled(Models.pic == "Study_Mood")
                                     }
                                 }
                                 .listRowBackground(Color("List"))
@@ -70,7 +75,7 @@ struct ModesSheet: View {
     }
    
 }
-
-#Preview {
-    ModesSheet()
-}
+//
+//#Preview {
+//    ModesSheet(selectedModel: .init(model: "", pic: "", title: "", desc: "") ?? <#default value#> as! Binding<Models>)
+//}

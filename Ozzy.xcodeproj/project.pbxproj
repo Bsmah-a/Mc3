@@ -18,6 +18,7 @@
 		419492FA2B6D024300B764AF /* eat57.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 419492F92B6D024300B764AF /* eat57.usdz */; };
 		419492FC2B6D035200B764AF /* Normal.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 419492FB2B6D035200B764AF /* Normal.usdz */; };
 		419493022B6D054400B764AF /* Sleep2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 419493012B6D054400B764AF /* Sleep2.usdz */; };
+		C5B72B6F2B6FC84A000ADE81 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B72B6E2B6FC84A000ADE81 /* ViewModel.swift */; };
 		C5DEF9AC2B66FC9400B89C68 /* ModesSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DEF9AB2B66FC9400B89C68 /* ModesSheet.swift */; };
 		C5DEF9AE2B66FCB700B89C68 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DEF9AD2B66FCB700B89C68 /* Models.swift */; };
 		C5DEF9B02B66FD3100B89C68 /* robot_walk_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C5DEF9AF2B66FD3100B89C68 /* robot_walk_idle.usdz */; };
@@ -55,6 +56,7 @@
 		419492F92B6D024300B764AF /* eat57.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = eat57.usdz; sourceTree = "<group>"; };
 		419492FB2B6D035200B764AF /* Normal.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Normal.usdz; sourceTree = "<group>"; };
 		419493012B6D054400B764AF /* Sleep2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sleep2.usdz; sourceTree = "<group>"; };
+		C5B72B6E2B6FC84A000ADE81 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C5DEF9AB2B66FC9400B89C68 /* ModesSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModesSheet.swift; sourceTree = "<group>"; };
 		C5DEF9AD2B66FCB700B89C68 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		C5DEF9AF2B66FD3100B89C68 /* robot_walk_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot_walk_idle.usdz; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				C5DEF9AD2B66FCB700B89C68 /* Models.swift */,
 				41335F862B59471D00C6A1CB /* Assets.xcassets */,
 				41335F882B59471D00C6A1CB /* Preview Content */,
+				C5B72B6E2B6FC84A000ADE81 /* ViewModel.swift */,
 			);
 			path = Mc3;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				41335F852B59471A00C6A1CB /* ContentView.swift in Sources */,
 				C5DEF9AC2B66FC9400B89C68 /* ModesSheet.swift in Sources */,
 				41335F832B59471A00C6A1CB /* AppDelegate.swift in Sources */,
+				C5B72B6F2B6FC84A000ADE81 /* ViewModel.swift in Sources */,
 				C5DEF9AE2B66FCB700B89C68 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,7 +454,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mc3/Preview Content\"";
-				DEVELOPMENT_TEAM = 557855FSBN;
+				DEVELOPMENT_TEAM = W8DD873N4N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -481,7 +485,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mc3/Preview Content\"";
-				DEVELOPMENT_TEAM = 557855FSBN;
+				DEVELOPMENT_TEAM = W8DD873N4N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";

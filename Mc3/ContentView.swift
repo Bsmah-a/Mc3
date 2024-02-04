@@ -47,6 +47,10 @@ class ARViewCoordinator: NSObject, ObservableObject, UIGestureRecognizerDelegate
 
 struct ARViewContainer: UIViewRepresentable {
     @ObservedObject private var coordinator = ARViewCoordinator()
+//    @State var selectedModel: Models = Models(model:"Normal.usdz",pic:"Study_Mood",
+//                                              title: "Study Mood",
+//                                              desc: "Pick your book and study with Ozzy")
+    @Binding var selectedModel: Models
 
     func makeUIView(context: Context) -> ARSCNView {
         let sceneView = ARSCNView()
@@ -54,8 +58,8 @@ struct ARViewContainer: UIViewRepresentable {
 
         let scene = SCNScene()
         // Load the model and adjust its position and scale
-        if let robotScene = SCNScene(named: "robot_walk_idle.usdz") {
-            for child in robotScene.rootNode.childNodes {
+        if let modelScene = SCNScene(named: selectedModel.model) {
+            for child in modelScene.rootNode.childNodes {
                 // Set the initial position of the character
                 child.position = SCNVector3(0, -20, -30) // Adjust position here
                 scene.rootNode.addChildNode(child)
@@ -94,15 +98,41 @@ struct ARViewContainer: UIViewRepresentable {
     func updateUIView(_ uiView: ARSCNView, context: Context) {}
 }
 
+import SwiftUI
+
 struct ContentView: View {
-    @State private var isModesSheetPresented = true
+    @State private var isModesSheetPresented = false
+    @State private var sheetOffset: CGFloat = UIScreen.main.bounds.height / 1.30
+    @State var selectedModel: Models = Models(model:"Normal.usdz",pic:"Study_Mood",
+                                              title: "Study Mood",
+                                              desc: "Pick your book and study with Ozzy")
     var body: some View {
-        ARViewContainer().edgesIgnoringSafeArea(.all)
-            .sheet(isPresented: $isModesSheetPresented, content: {
-                  ModesSheet()
-                .presentationDetents([.height(110), .medium])})
-                   }
+        ARViewContainer(selectedModel: $selectedModel)
+            .edgesIgnoringSafeArea(.all)
+            .overlay(
+                ModesSheet(selectedModel: $selectedModel)
+                    .offset(y: sheetOffset)
+                    .gesture(
+                        DragGesture()
+                            .onChanged { value in
+                                let newOffset = sheetOffset + value.translation.height
+                                sheetOffset = max(0, min(newOffset, UIScreen.main.bounds.height / 1.30))
+                            }
+                            .onEnded { value in
+                                withAnimation {
+                                    if sheetOffset > UIScreen.main.bounds.height / 4 {
+                                        isModesSheetPresented = true
+                                    } else {
+                                        sheetOffset = 250 // Keep the sheet open when swiped up
+                                    }
+                                }
+                            }
+                    )
+            )
+    }
 }
+
+
 
 #Preview {
     ContentView()
