@@ -1,3 +1,6 @@
+
+
+
 //
 //  ContentView.swift
 //  Mc3
@@ -10,19 +13,38 @@ import SceneKit
 
 class ARViewCoordinator: NSObject, ObservableObject, UIGestureRecognizerDelegate {
     var sceneView: ARSCNView?
-    
+    weak var characterNode: SCNNode? // Reference to the character node
+    var currentAngleY: Float = 0.0
+
     @objc func handlePinch(_ gesture: UIPinchGestureRecognizer) {
-        guard let sceneView = sceneView else { return }
+        guard let characterNode = characterNode else { return }
         
         if gesture.state == .changed {
-            let pinchScaleX = Float(gesture.scale) * sceneView.scene.rootNode.scale.x
-            let pinchScaleY = Float(gesture.scale) * sceneView.scene.rootNode.scale.y
-            let pinchScaleZ = Float(gesture.scale) * sceneView.scene.rootNode.scale.z
-            sceneView.scene.rootNode.scale = SCNVector3(pinchScaleX, pinchScaleY, pinchScaleZ)
-            gesture.scale = 1.0
+            let pinchScale = Float(gesture.scale)
+            let scale = SCNVector3(x: characterNode.scale.x * pinchScale,
+                                   y: characterNode.scale.y * pinchScale,
+                                   z: characterNode.scale.z * pinchScale)
+            
+            characterNode.scale = scale
+            gesture.scale = 1.0 // Reset the scale factor to avoid compounding the scale
+        }
+    }
+    
+    @objc func handlePan(_ gesture: UIPanGestureRecognizer) {
+        guard gesture.view != nil else { return }
+        let translation = gesture.translation(in: gesture.view!)
+        
+        var newAngleY = (Float)(translation.x) * (Float)(Double.pi) / 180.0
+        newAngleY += currentAngleY
+        
+        characterNode?.eulerAngles.y = newAngleY
+        
+        if gesture.state == .ended {
+            currentAngleY = newAngleY
         }
     }
 }
+
 struct ARViewContainer: UIViewRepresentable {
     @ObservedObject private var coordinator = ARViewCoordinator()
 
@@ -31,13 +53,18 @@ struct ARViewContainer: UIViewRepresentable {
         coordinator.sceneView = sceneView
 
         let scene = SCNScene()
-//      let camera= SCNCamera()
-        // Load the model
-        if let robotScene = SCNScene(named: "Sleep2.usdz") {
+        // Load the model and adjust its position and scale
+        if let robotScene = SCNScene(named: "robot_walk_idle.usdz") {
             for child in robotScene.rootNode.childNodes {
+                // Set the initial position of the character
+                child.position = SCNVector3(0, -20, -30) // Adjust position here
                 scene.rootNode.addChildNode(child)
+                coordinator.characterNode = child // Store the reference to the character node
             }
         }
+        
+        // Set the initial scale of the root node to change the size of the model
+        scene.rootNode.scale = SCNVector3(0.4, 0.4, 0.4)
 
         sceneView.scene = scene
 
@@ -48,27 +75,18 @@ struct ARViewContainer: UIViewRepresentable {
         ambientLightNode.light?.intensity = 1000
         sceneView.scene.rootNode.addChildNode(ambientLightNode)
         sceneView.autoenablesDefaultLighting = true
-        
-        
-        
-        
-        // Adjust the scale of the Model on camera
-//        let cameraNode = SCNNode()
-//        cameraNode.camera = SCNCamera()
-//        cameraNode.camera?.usesOrthographicProjection = true
-//        cameraNode.position = SCNVector3(0, 5, 10)
-//        //cameraNode.lookAt(SCNVector3(0, 5, 0))
-//        sceneView.scene.rootNode.addChildNode(cameraNode)
-        
-        
-//         Adjust the scale of the root node to change the size of the model
-        scene.rootNode.scale = SCNVector3(0.8, 0.8, 0.1)
 
         let configuration = ARWorldTrackingConfiguration()
         sceneView.session.run(configuration)
-        // Add pinch gesture recognizer
+        
+        // Add pinch gesture recognizer for scaling the model with pinch gesture
         let pinchGesture = UIPinchGestureRecognizer(target: coordinator, action: #selector(ARViewCoordinator.handlePinch(_:)))
         sceneView.addGestureRecognizer(pinchGesture)
+        
+        // Add pan gesture recognizer for rotating the model
+        let panGesture = UIPanGestureRecognizer(target: coordinator, action: #selector(ARViewCoordinator.handlePan(_:)))
+        panGesture.delegate = coordinator
+        sceneView.addGestureRecognizer(panGesture)
 
         return sceneView
     }
@@ -80,17 +98,12 @@ struct ContentView: View {
     @State private var isModesSheetPresented = true
     var body: some View {
         ARViewContainer().edgesIgnoringSafeArea(.all)
-        
             .sheet(isPresented: $isModesSheetPresented, content: {
                   ModesSheet()
                 .presentationDetents([.height(110), .medium])})
                    }
 }
 
-
-
-
- 
 #Preview {
     ContentView()
 }

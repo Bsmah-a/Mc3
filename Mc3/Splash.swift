@@ -32,11 +32,12 @@ struct Splash: View {
                         }
                     }
                 
-                Image("ozzy")
+                Image("Ozzy")
                     .scaleEffect(0.75)
                     .offset(x: 20, y: offsetY)
                     .rotationEffect(.degrees(20))
                     .animation(.easeInOut(duration: 1.8))
+               
             }
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 4.0){self.isActive = true}
