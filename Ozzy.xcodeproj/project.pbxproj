@@ -15,13 +15,13 @@
 		41335F942B59471D00C6A1CB /* Mc3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41335F932B59471D00C6A1CB /* Mc3Tests.swift */; };
 		41335F9E2B59471D00C6A1CB /* Mc3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41335F9D2B59471D00C6A1CB /* Mc3UITests.swift */; };
 		41335FA02B59471D00C6A1CB /* Mc3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41335F9F2B59471D00C6A1CB /* Mc3UITestsLaunchTests.swift */; };
-		419492FA2B6D024300B764AF /* eat57.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 419492F92B6D024300B764AF /* eat57.usdz */; };
-		419492FC2B6D035200B764AF /* Normal.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 419492FB2B6D035200B764AF /* Normal.usdz */; };
-		419493022B6D054400B764AF /* Sleep2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 419493012B6D054400B764AF /* Sleep2.usdz */; };
 		C5B72B6F2B6FC84A000ADE81 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B72B6E2B6FC84A000ADE81 /* ViewModel.swift */; };
 		C5DEF9AC2B66FC9400B89C68 /* ModesSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DEF9AB2B66FC9400B89C68 /* ModesSheet.swift */; };
 		C5DEF9AE2B66FCB700B89C68 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DEF9AD2B66FCB700B89C68 /* Models.swift */; };
 		C5DEF9B02B66FD3100B89C68 /* robot_walk_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C5DEF9AF2B66FD3100B89C68 /* robot_walk_idle.usdz */; };
+		F3E078112B6FCF1800C8B017 /* NormalM77.usdz in Resources */ = {isa = PBXBuildFile; fileRef = F3E078102B6FCF1800C8B017 /* NormalM77.usdz */; };
+		F3E078132B6FD66E00C8B017 /* EatM.usdz in Resources */ = {isa = PBXBuildFile; fileRef = F3E078122B6FD66E00C8B017 /* EatM.usdz */; };
+		F3E078152B6FD68500C8B017 /* SleepM.usdz in Resources */ = {isa = PBXBuildFile; fileRef = F3E078142B6FD68500C8B017 /* SleepM.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +53,13 @@
 		41335F992B59471D00C6A1CB /* OzzyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OzzyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41335F9D2B59471D00C6A1CB /* Mc3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mc3UITests.swift; sourceTree = "<group>"; };
 		41335F9F2B59471D00C6A1CB /* Mc3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mc3UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		419492F92B6D024300B764AF /* eat57.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = eat57.usdz; sourceTree = "<group>"; };
-		419492FB2B6D035200B764AF /* Normal.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Normal.usdz; sourceTree = "<group>"; };
-		419493012B6D054400B764AF /* Sleep2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sleep2.usdz; sourceTree = "<group>"; };
 		C5B72B6E2B6FC84A000ADE81 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C5DEF9AB2B66FC9400B89C68 /* ModesSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModesSheet.swift; sourceTree = "<group>"; };
 		C5DEF9AD2B66FCB700B89C68 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		C5DEF9AF2B66FD3100B89C68 /* robot_walk_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot_walk_idle.usdz; sourceTree = "<group>"; };
+		F3E078102B6FCF1800C8B017 /* NormalM77.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = NormalM77.usdz; sourceTree = "<group>"; };
+		F3E078122B6FD66E00C8B017 /* EatM.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = EatM.usdz; sourceTree = "<group>"; };
+		F3E078142B6FD68500C8B017 /* SleepM.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = SleepM.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +113,9 @@
 				29863F9F2B6E4751000C9C78 /* Splash.swift */,
 				41335F822B59471A00C6A1CB /* AppDelegate.swift */,
 				41335F842B59471A00C6A1CB /* ContentView.swift */,
-				419492F92B6D024300B764AF /* eat57.usdz */,
-				419492FB2B6D035200B764AF /* Normal.usdz */,
-				419493012B6D054400B764AF /* Sleep2.usdz */,
+				F3E078122B6FD66E00C8B017 /* EatM.usdz */,
+				F3E078142B6FD68500C8B017 /* SleepM.usdz */,
+				F3E078102B6FCF1800C8B017 /* NormalM77.usdz */,
 				C5DEF9AF2B66FD3100B89C68 /* robot_walk_idle.usdz */,
 				C5DEF9AB2B66FC9400B89C68 /* ModesSheet.swift */,
 				C5DEF9AD2B66FCB700B89C68 /* Models.swift */,
@@ -257,9 +257,9 @@
 			files = (
 				41335F8A2B59471D00C6A1CB /* Preview Assets.xcassets in Resources */,
 				41335F872B59471D00C6A1CB /* Assets.xcassets in Resources */,
-				419493022B6D054400B764AF /* Sleep2.usdz in Resources */,
-				419492FC2B6D035200B764AF /* Normal.usdz in Resources */,
-				419492FA2B6D024300B764AF /* eat57.usdz in Resources */,
+				F3E078112B6FCF1800C8B017 /* NormalM77.usdz in Resources */,
+				F3E078132B6FD66E00C8B017 /* EatM.usdz in Resources */,
+				F3E078152B6FD68500C8B017 /* SleepM.usdz in Resources */,
 				C5DEF9B02B66FD3100B89C68 /* robot_walk_idle.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,7 +454,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mc3/Preview Content\"";
-				DEVELOPMENT_TEAM = W8DD873N4N;
+				DEVELOPMENT_TEAM = 557855FSBN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -485,7 +485,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mc3/Preview Content\"";
-				DEVELOPMENT_TEAM = W8DD873N4N;
+				DEVELOPMENT_TEAM = 557855FSBN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";

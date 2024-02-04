@@ -10,24 +10,12 @@ import SwiftUI
 
 struct ModesSheet: View {
     @Binding var selectedModel: Models
-    // change the .navigationBarTitle color
-    init(selectedModel: Binding<Models>) {
-        self._selectedModel =  selectedModel
-           UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(named: "Title") ?? .black]
-           UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(named: "Title") ?? .black]
-           }
-//    @State private var models:[Models] = []
 
-    let freemodel :[Models] = [
-        Models(model:"eat57.usdz",pic:"Eating_Mood",
-               title: "Eat Mood     ",
-               desc: "Eat with Ozzy"),
-        Models(model:"Sleep2.usdz",pic:"Sleeping_Mood",
-               title: "Sleep Mood",
-               desc: "Nighty Night It's for Ozzy to sleep"),
-        Models(model:"Normal.usdz",pic:"Study_Mood",
-               title: "Study Mood",
-               desc: "Pick your book and study with Ozzy")]
+    let freemodel: [Models] = [
+        Models(model: "EatM.usdz", pic: "Eating_Mood", title: "Eat Mood", desc: "Eat with Ozzy"),
+        Models(model: "SleepM.usdz", pic: "Sleeping_Mood", title: "Sleep Mood", desc: "Nighty Night It's for Ozzy to sleep"),
+        Models(model: "NormalM77.usdz", pic: "Study_Mood", title: "Study Mood", desc: "Pick your book and study with Ozzy")
+    ]
     
         var body: some View {
                     NavigationStack {
@@ -50,8 +38,8 @@ struct ModesSheet: View {
                                                 .foregroundColor(.white)}
                                         }
                                         Button(action: {
-                                            print("the selected model is: \(Models.model)")
-                                           selectedModel = Models
+                                                  print("the selected model is: \(Models.model)")
+                                                  selectedModel = Models
                                         }) {
                                             if Models.pic == "Study_Mood" {
                                                 Text("Soon!").foregroundColor(.white)
